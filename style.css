@@ -203,13 +203,17 @@ header li {
 }
 
 .gridMainIndex {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto auto 700px;
   grid-template-areas:
     "boxLeft boxRight"
     "leftOur rightOur"
-    "boxWhyItLeft boxWhyItRight";
+    "boxWhyItLeft boxWhyItRight"
+    "newBeauty newBeauty"
+    "handSelectedQuality handSelectedQuality"
+    "containerOurBestSellers containerOurBestSellers";
 }
 
 .boxWhyItLeft {
@@ -218,6 +222,18 @@ header li {
 
 .boxWhyItRight {
   grid-area: boxWhyItRight;
+}
+
+.newBeauty {
+  grid-area: newBeauty;
+}
+
+.handSelectedQuality {
+  grid-area: handSelectedQuality;
+}
+
+.containerOurBestSellers {
+  grid-area: containerOurBestSellers;
 }
 
 .leftOur {

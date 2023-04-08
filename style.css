@@ -537,6 +537,7 @@ header li {
 }
 
 .ourBestSellerGrid {
+  padding: 0 12.5% 0 12.5%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
@@ -579,6 +580,7 @@ header li {
 }
 
 .containerOurBestSellers h2 {
+  font-size: 32px;
   color: #314c3e;
   font-family: "Agatho", serif;
   font-weight: 400;
@@ -593,6 +595,38 @@ header li {
   font-weight: 400;
   text-decoration: none;
   font-size: 24px;
+}
+
+.product-hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.product-hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #80bb06;
+  height: 1px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.product-hvr-underline-from-center:hover:before,
+.product-hvr-underline-from-center:focus:before,
+.product-hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
 }
 
 .ourBestPrice {

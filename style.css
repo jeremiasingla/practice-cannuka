@@ -1,0 +1,453 @@
+@font-face {
+  font-family: "Agatho";
+  src: url("fonts/Agatho_Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Agatho";
+  src: url("fonts/Agatho_\ Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Agatho";
+  src: url("fonts/Agatho_\ Light.otf") format("opentype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Agatho";
+  src: url("fonts/Agatho_\ Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.gridCanukkaHome {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "main";
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+header {
+  min-height: 100vh;
+  max-height: 100vh;
+  background-image: url(img/cannuka_banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px;
+}
+
+.navGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "navLeft headerLogo navRight"
+    "flexSkin flexSkin flexSkin";
+}
+
+.navLeft {
+  grid-area: navLeft;
+}
+
+.headerLogo {
+  grid-area: headerLogo;
+}
+
+.navRight {
+  grid-area: navRight;
+}
+
+.flexSkin {
+  grid-area: flexSkin;
+  margin: 12% 0 0 12%;
+}
+
+.navLeft,
+.headerLogo,
+.navRight {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.headerLogo img {
+  transition: 0.3s all;
+  cursor: pointer;
+}
+
+.headerLogo img:hover {
+  filter: drop-shadow(0px 0px 10px #314c3e);
+}
+
+header ul {
+  display: flex;
+}
+
+header a {
+  font-family: "Nexa", sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s color;
+}
+
+header li a:hover {
+  color: #314c3e;
+  /* text-decoration: underline; */
+}
+
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #314c3e;
+  height: 1px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+header li {
+  list-style: none;
+  padding: 0 2em;
+}
+
+.headerLogo {
+  height: 80px;
+}
+
+.shopSkinCare {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+}
+
+.parrafoCbd {
+  font-family: "Nexa", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #f6e5a5;
+  font-size: 24px;
+}
+
+.tituloSeparately {
+  font-family: "Agatho", serif;
+  color: #fff;
+  font-size: 62px;
+  width: 40%;
+}
+
+.botonShopSkin {
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: "Nexa", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #314c3e;
+  text-align: center;
+  border-radius: 30px;
+  width: 12%;
+  padding: 14px 0 12px 0;
+  font-size: 12px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.botonShopSkin:hover {
+  background-color: #ffffff00;
+  border: 2px solid #fff;
+}
+
+.gridMainIndex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto 700px;
+  grid-template-areas:
+    "boxLeft boxRight"
+    "leftOur rightOur"
+    "boxWhyItLeft boxWhyItRight";
+}
+
+.boxWhyItLeft {
+  grid-area: boxWhyItLeft;
+}
+
+.boxWhyItRight {
+  grid-area: boxWhyItRight;
+}
+
+.leftOur {
+  padding: 80px 0;
+  grid-area: leftOur;
+  display: flex;
+  justify-content: right;
+}
+
+.leftOur img {
+  width: 80%;
+  height: auto;
+}
+
+.rightOur {
+  grid-area: rightOur;
+  margin: 80px;
+}
+
+.boxLeft {
+  border: 1px solid #314c3e;
+  grid-area: boxLeft;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxRight {
+  border-top: 1px solid #314c3e;
+  border-bottom: 1px solid #314c3e;
+  border-right: 1px solid #314c3e;
+  grid-area: boxRight;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxLeft img,
+.boxRight img {
+  margin-top: 40px;
+  width: 40px;
+}
+
+.margin-bottom {
+  margin-bottom: 10px;
+}
+
+.titleBoxesMain {
+  text-align: center;
+  font-family: "Agatho", serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #314c3e;
+}
+
+.subBoxesMain {
+  font-family: "Nexa", sans-serif;
+  color: #707070;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.margin-bottom40 {
+  margin-bottom: 40px;
+}
+
+.subIngredients {
+  color: #d3716e;
+  letter-spacing: 1px;
+  font-family: "Nexa", sans-serif;
+  text-transform: uppercase;
+}
+
+.titleIngredients {
+  color: #314c3e;
+  font-family: "Agatho", serif;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.titleIngredients span {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  color: #314c3e;
+}
+
+.descIngredients {
+  color: #707070;
+  font-family: "Nexa", sans-serif;
+}
+
+.ingredientsList {
+  color: #000;
+  font-family: "Nexa", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.ingredientsList li {
+  list-style: none;
+}
+
+.subSubIng {
+  color: #000;
+  font-family: "Nexa", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.ingredientsFlex {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.margin-bottom20 {
+  margin-bottom: 20px;
+}
+
+.containerBtnLearnMore {
+  margin: 60px 0;
+}
+
+.learnMore {
+  text-decoration: none;
+  font-family: "Nexa", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  background-color: #80bc04;
+  letter-spacing: 1px;
+  text-align: center;
+  border-radius: 30px;
+  padding: 14px 40px 10px;
+  font-size: 16px;
+}
+
+.boxWhyItRight {
+  background-color: #fce1d4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxWhyItRight img {
+  height: 80%;
+  width: auto;
+}
+
+.boxWhyItLeft {
+  background-color: #80bc04;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.WhyWhite {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 80%;
+  background-color: #fff;
+}
+
+.whySub {
+  font-size: 14px;
+  text-align: center;
+  color: #d3716e;
+  letter-spacing: 1px;
+  font-family: "Nexa", sans-serif;
+  text-transform: uppercase;
+}
+
+.cleanSub {
+  font-size: 14px;
+  text-align: center;
+  color: #314c3e;
+  letter-spacing: 1px;
+  font-family: "Nexa", sans-serif;
+  text-transform: uppercase;
+}
+
+.titleReal {
+  text-align: center;
+  color: #314c3e;
+  font-family: "Agatho", serif;
+  font-size: 24px;
+}
+
+.WhyText {
+  padding: 0 10%;
+  text-align: center;
+  color: #707070;
+  font-size: 14px;
+  font-family: "Nexa", sans-serif;
+}
+
+.newBeauty {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.newBeautyLogo img {
+  width: 200px;
+  height: auto;
+}
+
+.subNewBeauty {
+  font-family: "Agatho", serif;
+  font-weight: 300;
+  color: #8f8f8f;
+  font-size: 24px;
+}
+
+.autorNewBeauty {
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #d3716e;
+  letter-spacing: 1px;
+  font-family: "Nexa", sans-serif;
+  text-transform: uppercase;
+}
+
+.editorNewBeauty {
+  font-family: "Nexa", sans-serif;
+  color: #8f8f8f;
+  font-size: 14px;
+}

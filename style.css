@@ -180,6 +180,7 @@ header li {
 
 .botonShopSkin {
   cursor: pointer;
+  border: 2px solid #ffffff00;
   margin-top: 20px;
   font-family: "Nexa", sans-serif;
   text-transform: uppercase;
@@ -193,6 +194,7 @@ header li {
   padding: 14px 0 12px 0;
   font-size: 12px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  transition: 0.35s all;
 }
 
 .botonShopSkin:hover {
@@ -285,6 +287,7 @@ header li {
 }
 
 .subIngredients {
+  font-weight: 600;
   color: #d3716e;
   letter-spacing: 1px;
   font-family: "Nexa", sans-serif;
@@ -343,6 +346,8 @@ header li {
 }
 
 .learnMore {
+  cursor: pointer;
+  border: 2px solid #ffffff00;
   text-decoration: none;
   font-family: "Nexa", sans-serif;
   text-transform: uppercase;
@@ -354,6 +359,12 @@ header li {
   border-radius: 30px;
   padding: 14px 40px 10px;
   font-size: 16px;
+}
+
+.learnMore:hover {
+  border: 2px solid #000000;
+  color: #000;
+  background-color: #00000000;
 }
 
 .boxWhyItRight {
@@ -369,7 +380,8 @@ header li {
 }
 
 .boxWhyItLeft {
-  background-color: #80bc04;
+  background-image: url(img/fondoDiv.jpg);
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -386,6 +398,7 @@ header li {
 }
 
 .whySub {
+  font-weight: 600;
   font-size: 14px;
   text-align: center;
   color: #d3716e;
@@ -396,6 +409,7 @@ header li {
 
 .cleanSub {
   font-size: 14px;
+  font-weight: 600;
   text-align: center;
   color: #314c3e;
   letter-spacing: 1px;
@@ -449,5 +463,146 @@ header li {
 .editorNewBeauty {
   font-family: "Nexa", sans-serif;
   color: #8f8f8f;
+  font-size: 14px;
+}
+
+.handSelectedQuality {
+  width: 100%;
+  height: auto;
+  padding: 10% 0 10% 0;
+  background-image: url(img/cannuka_bottom-banner.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.OurSources {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+}
+
+.handSelectedArm {
+  grid-area: handSelectedArm;
+  display: flex;
+  justify-content: center;
+}
+
+.parrafoHandSelected {
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #d3716e;
+  letter-spacing: 1px;
+  font-family: "Nexa", sans-serif;
+  text-transform: uppercase;
+}
+
+.tituloSustainably {
+  width: 30%;
+  color: #314c3e;
+  font-family: "Agatho", serif;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.containerBotonOurSources {
+  margin: 60px 0;
+}
+
+.botonOurSources {
+  cursor: pointer;
+  border: 2px solid #00000000;
+  text-decoration: none;
+  font-family: "Nexa", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  background-color: #80bc04;
+  letter-spacing: 1px;
+  text-align: center;
+  border-radius: 30px;
+  padding: 14px 40px 10px;
+  font-size: 16px;
+}
+
+.botonOurSources:hover {
+  border: 2px solid #000000;
+  color: #000;
+  background-color: #00000000;
+}
+
+.ourBestSellerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "boxOurBestSeller1 boxOurBestSeller2 boxOurBestSeller3";
+}
+
+.boxOurBestSeller1 {
+  grid-area: boxOurBestSeller1;
+}
+
+.boxOurBestSeller2 {
+  grid-area: boxOurBestSeller2;
+}
+
+.boxOurBestSeller3 {
+  grid-area: boxOurBestSeller3;
+}
+
+.boxOurBestSeller1,
+.boxOurBestSeller2,
+.boxOurBestSeller3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerOurBestSellers {
+  background-color: #d9e9df;
+}
+
+.boxOurBestSeller1 img,
+.boxOurBestSeller2 img,
+.boxOurBestSeller3 img {
+  border: 10px solid transparent;
+  border-image: url(img/madera.jpeg) 30;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.containerOurBestSellers h2 {
+  color: #314c3e;
+  font-family: "Agatho", serif;
+  font-weight: 400;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.ourBestProduct {
+  margin: 20px 0;
+  color: #314c3e;
+  font-family: "Agatho", serif;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.ourBestPrice {
+  color: #314c3e;
+  font-family: "Nexa", sans-serif;
+  letter-spacing: 2px;
+}
+
+.ourBestSoldOut {
+  color: #d3716e;
+  font-family: "Nexa", sans-serif;
   font-size: 14px;
 }
